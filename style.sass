@@ -23,6 +23,9 @@ body
     color: var(--clr-neutral-1)
     font-weight: 400
     background-color: #fafafa
+.scroll-paused
+    height: 100%
+    overflow: hidden
 .bg-intro-desktop
     display: none
 h1, h2, h3
@@ -62,10 +65,32 @@ section, #site-footer
     width: 100%
     position: absolute
     z-index: 1
+    .menu
+        nav
+            float: right
+        #close-menu
+            display: none
+        ul
+            display: none
+            position: absolute
+            background-color: var(--clr-neutral-4)
+            width: 90vw
+            left: 50%
+            top: 80px
+            transform: translateX(-50%)
+            text-align: center
+            list-style: none
+            padding: 20px
+            border-radius: 5px
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)
+            li
+                margin: 20px
+                color: var(--clr-primary-1)
+                font-weight: 500
 .container
     section
         &:nth-child(even)
-            background-color: #f7f7f7
+            background-color: #f2f2f2
         & + section
             padding-top: 50px
         padding-bottom: 50px
@@ -132,7 +157,7 @@ section, #site-footer
         li
             margin: 20px
             color: var(--clr-neutral-4)
-            font-weight: 700
+            font-weight: 500
     div:nth-child(1)
         width: 60%
         svg.logo
