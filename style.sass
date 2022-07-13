@@ -1,0 +1,152 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+:root
+    --clr-primary-1: hsl(233, 26%, 24%)  /*Dark Blue*/
+    --clr-primary-2: hsl(136, 65%, 51%)  /*Lime Green*/
+    --clr-primary-3: hsl(192, 70%, 51%)  /*Bright Cyan*/
+    --clr-neutral-1: hsl(233, 8%, 62%)  /*Grayish Blue*/
+    --clr-neutral-2: hsl(220, 16%, 96%)  /*Light Grayish Blue*/
+    --clr-neutral-3: hsl(0, 0%, 98%)  /*Very Light Gray*/
+    --clr-neutral-4: hsl(0, 0%, 100%)  /*White*/
+    --page-padding: 30px
+html
+    font-size: 62.5%
+body
+    scroll-behavior: smooth
+    min-height: 100vh
+    max-width: 100%
+    font-size: 1.4rem
+    overflow-x: hidden
+    font-family: 'Public Sans', sans-serif
+    color: var(--clr-neutral-1)
+    font-weight: 400
+    background-color: #fafafa
+.bg-intro-desktop
+    display: none
+h1, h2, h3
+    text-align: center
+    margin: auto
+    color: var(--clr-primary-1)
+    font-weight: 400
+p
+    text-align: center
+    line-height: 1.5
+    margin: 20px 0
+h1
+    font-size: 4rem
+h2
+    font-size: 3rem
+    max-width: 80%
+h3
+    font-size: 2rem
+.button
+    background-image: linear-gradient(to right, var(--clr-primary-2), var(--clr-primary-3))
+    padding: 15px 30px
+    border-radius: 50px
+    border: none
+    cursor: pointer
+    color: var(--clr-neutral-4)
+    margin: 10px 0px
+    text-align: center
+    font-family: 'Public Sans', sans-serif
+section, #site-footer
+    padding: 0px var(--page-padding)
+#site-header
+    display: flex
+    padding: 20px var(--page-padding)
+    justify-content: space-between
+    align-items: center
+    background-color: var(--clr-neutral-4)
+    width: 100%
+    position: absolute
+    z-index: 1
+.container
+    section
+        &:nth-child(even)
+            background-color: #f7f7f7
+        & + section
+            padding-top: 50px
+        padding-bottom: 50px
+#intro
+    .bg-intro
+        z-index: -1
+        position: absolute
+        top: 0
+        left: 0
+        width: 100vw
+    img
+        max-width: 100%
+    .hero
+        button
+            transform: translateX(-50%)
+            position: relative
+            left: 50%
+#features
+    .wrapper
+        div
+            svg
+                transform: translateX(-50%)
+                position: relative
+                left: 50%
+                margin: 10px 0
+#articles
+    header
+        margin: 20px 0
+    .wrapper
+        .cards
+            background-color: var(--clr-neutral-4)
+            border-radius: 5px
+            overflow: hidden
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1)
+            & + .cards
+                margin-top: 30px
+            figure
+                img
+                    width: 100%
+                figcaption
+                    margin: 30px
+                    font-size: 80%
+                    p
+                        text-align: left
+                        margin: 0
+                        &.title
+                            color: var(--clr-primary-1)
+                            font-size: 1.5rem
+                            line-height: normal
+                            margin: 10px 0
+#site-footer
+    width: 100%
+    background-color: var(--clr-primary-1)
+    padding:
+        top: 30px
+        bottom: 30px
+    div, ul
+        margin: auto
+        width: fit-content
+        display: table
+    .links
+        text-align: center
+        list-style: none
+        li
+            margin: 20px
+            color: var(--clr-neutral-4)
+            font-weight: 700
+    div:nth-child(1)
+        width: 60%
+        svg.logo
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
+        .socials
+            margin: 20px auto
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+    .request-button
+        .button
+            position: relative
+            left: 50%
+            transform: translateX(-50%)
