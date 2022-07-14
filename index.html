@@ -7,6 +7,7 @@
     <title>EASYBANK Landing Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,24 +24,24 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19"><g fill="#2D314D" fill-rule="evenodd"><path d="M.868.661l16.97 16.97-.706.708L.162 1.369z"/><path d="M.161 17.632L17.131.662l.708.706-16.97 16.97z"/></g></svg>
             </nav>
             <ul>
-                <li><a>About Us</a></li>
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
                 <li><a>Contact</a></li>
                 <li><a>Blog</a></li>
                 <li><a>Careers</a></li>
-                <li><a>Support</a></li>
-                <li><a>Privacy Policy</a></li>
             </ul>
+            <button id="request-invite" class="button">Request Invite</button>
         </div>
     </header>
     <div class="container">
         <section id="intro">
-            <img src="images/image-mockups.png" alt="image-mockups">
+            <img src="images/image-mockups.png" alt="image-mockups" class="mockups">
             <img src="images/bg-intro-desktop.svg" class="bg-intro bg-intro-desktop">
             <img src="images/bg-intro-mobile.svg" class="bg-intro bg-intro-mobile">
             <div class="hero">
                 <h1 class="hero-main">Next generation digital banking</h1>
                 <p class="hero-sub">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
-                <button class="button">Request Invite</button>
+                <button id="request-invite" class="button">Request Invite</button>
             </div>
         </section>
         <section id="features">
@@ -143,7 +144,8 @@
             <p class="copyright">&copy; Easybank. All Right Reserved</p>
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
