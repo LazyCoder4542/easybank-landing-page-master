@@ -22,7 +22,7 @@ body
     font-family: 'Public Sans', sans-serif
     color: var(--clr-neutral-1)
     font-weight: 400
-    background-color: #fafafa
+    background-color: var(--clr-neutral-3)
 .scroll-paused
     height: 100%
     overflow: hidden
@@ -56,6 +56,12 @@ h3
     margin: 10px 0px
     text-align: center
     font-family: 'Public Sans', sans-serif
+    overflow: hidden
+    transition-property: box-shadow
+    transition-duration: 500ms
+    transition-timing-function: linear
+    &:hover
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3)
 section, #site-footer
     padding: 0px var(--page-padding)
 #site-header
@@ -98,7 +104,7 @@ section, #site-footer
     section
         width: 100%
         &:nth-child(even)
-            background-color: #f2f2f2
+            background-color: var(--clr-neutral-2)
         & + section
             padding-top: 50px
         padding-bottom: 50px
@@ -149,6 +155,12 @@ section, #site-footer
                             font-size: 1.5rem
                             line-height: normal
                             margin: 10px 0
+                            cursor: pointer
+                            transition-property: color
+                            transition-duration: 500ms
+                            transition-timing-function: linear
+                            &:hover
+                                color: var(--clr-primary-2)
 #site-footer
     width: 100%
     background-color: var(--clr-primary-1)
@@ -166,6 +178,12 @@ section, #site-footer
             margin: 20px
             color: var(--clr-neutral-4)
             font-weight: 500
+            cursor: pointer
+            transition-property: color
+            transition-duration: 500ms
+            transition-timing-function: linear
+            &:hover
+                color: var(--clr-primary-2)
     div:nth-child(1)
         width: 60%
         svg.logo
@@ -178,6 +196,15 @@ section, #site-footer
             justify-content: space-between
             align-items: center
             width: 100%
+            svg
+                cursor: pointer
+                path
+                    transition-property: fill
+                    transition-duration: 500ms
+                    transition-timing-function: linear
+                &:hover
+                    path
+                        fill: var(--clr-primary-2)
     .request-button
         .button
             position: relative
@@ -305,6 +332,29 @@ section, #site-footer
     #site-header
         .menu
             column-gap: 15vw
+            ul
+                li
+                    margin: 0 20px
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    align-items: center
+                    &::after
+                        transition-property: all
+                        transition-duration: 200ms
+                        transform: scale(0.1)
+                        content: ""
+                    &:hover
+                        &::after
+                            align-self: flex-end
+                            content: ""
+                            width: 100%
+                            height: 5px
+                            background-image: linear-gradient(to right, var(--clr-primary-2), var(--clr-primary-3))
+                            transform: translateY(20px) scale(1)
+                        a
+                            transform: translateY(50%)
+
             .button
                 display: block
                 margin: 0

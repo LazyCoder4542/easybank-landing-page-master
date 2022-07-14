@@ -28,7 +28,7 @@ body {
   font-family: "Public Sans", sans-serif;
   color: var(--clr-neutral-1);
   font-weight: 400;
-  background-color: #fafafa;
+  background-color: var(--clr-neutral-3);
 }
 
 .scroll-paused {
@@ -78,6 +78,13 @@ h3 {
   margin: 10px 0px;
   text-align: center;
   font-family: "Public Sans", sans-serif;
+  overflow: hidden;
+  transition-property: box-shadow;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+.button:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
 }
 
 section, #site-footer {
@@ -132,7 +139,7 @@ section, #site-footer {
   padding-bottom: 50px;
 }
 .container section:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: var(--clr-neutral-2);
 }
 .container section + section {
   padding-top: 50px;
@@ -189,6 +196,13 @@ section, #site-footer {
   font-size: 1.5rem;
   line-height: normal;
   margin: 10px 0;
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+#articles .wrapper .cards figure figcaption p.title:hover {
+  color: var(--clr-primary-2);
 }
 
 #site-footer {
@@ -210,6 +224,13 @@ section, #site-footer {
   margin: 20px;
   color: var(--clr-neutral-4);
   font-weight: 500;
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+#site-footer .links li:hover {
+  color: var(--clr-primary-2);
 }
 #site-footer div:nth-child(1) {
   width: 60%;
@@ -225,6 +246,17 @@ section, #site-footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+#site-footer div:nth-child(1) div.socials svg {
+  cursor: pointer;
+}
+#site-footer div:nth-child(1) div.socials svg path {
+  transition-property: fill;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+}
+#site-footer div:nth-child(1) div.socials svg:hover path {
+  fill: var(--clr-primary-2);
 }
 #site-footer .request-button .button {
   position: relative;
@@ -383,6 +415,30 @@ section, #site-footer {
   }
   #site-header .menu {
     column-gap: 15vw;
+  }
+  #site-header .menu ul li {
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #site-header .menu ul li::after {
+    transition-property: all;
+    transition-duration: 200ms;
+    transform: scale(0.1);
+    content: "";
+  }
+  #site-header .menu ul li:hover::after {
+    align-self: flex-end;
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(to right, var(--clr-primary-2), var(--clr-primary-3));
+    transform: translateY(20px) scale(1);
+  }
+  #site-header .menu ul li:hover a {
+    transform: translateY(50%);
   }
   #site-header .menu .button {
     display: block;
